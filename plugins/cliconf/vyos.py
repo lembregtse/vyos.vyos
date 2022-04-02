@@ -199,10 +199,7 @@ class Cliconf(CliconfBase):
 
     def commit(self, comment=None, confirm=None):
         if confirm:
-            if comment:
-                command = 'commit-confirm {0} comment {1}'.format(confirm, comment)
-            else:
-                command = 'commit-confirm {0}'.format(confirm)
+            command = 'commit-confirm {0}'.format(confirm)
         else:
             if comment:
                 command = 'commit {0}'.format(comment)
